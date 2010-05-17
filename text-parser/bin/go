@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+$: << File.join(File.dirname(__FILE__), '../lib')
+
+require 'parser'
+require 'formatter'
+
+SAMPLES_FOLDER = File.join(File.dirname(__FILE__), '../test/samples')
+FILES = %w[
+  comma.txt space.txt pipe.txt].map { |f| File.join(SAMPLES_FOLDER, f) }
+
+parser = Parser.new(FILES)
+formatter = Formatter.new(parser.records)
+
+puts 'Output 1:'
+formatter.render(:by => [:gender, :last_name])
+
+puts "\nOutput 2:"
+formatter.render(:by => [:born_on, :last_name])
+
+puts "\nOutput 3:"
+formatter.render(:by => :last_name, :order => 'desc')

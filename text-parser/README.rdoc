@@ -1,0 +1,35 @@
+# = Text Parser Code Example
+#
+# == Author
+# Bob Nadler, Jr. (bobnadler.com)
+# 
+# == Description
+# Parses data from files (three formats supported, see Parser#initialize) and
+# displays the combined results.
+#
+# The required output can be seen by running +ruby bin/go+. The default 
+# output is to the console.
+#
+# Tests can be run using Rake ("rake test" is the default task).
+#
+# == Project Layout
+# \bin::
+#   Contains shell script(s).
+#
+# \lib::
+#   Main project source code.
+#
+# \test::
+#   All test source code and data samples.
+#
+# rakefile::
+#   Rake tasks for the project.
+#
+# README.rdoc::
+#   This file.
+#
+# == Specs
+# Ruby Version::
+#   ruby 1.8.7 (2009-06-08 patchlevel 173) [universal-darwin10.0]
+# Rake::
+#   Version 0.8.7
