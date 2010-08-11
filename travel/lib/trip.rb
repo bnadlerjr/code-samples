@@ -35,22 +35,17 @@ class Trip
   
   # The legs of the trip. Returns an array of location hashes.
   def legs
-    i = 0
-    while i < @stops.length - 1
-      distance = calculate_distance(@stops[i], @stops[i+1])
-      @legs << { :origin      => @stops[i], 
-                 :destination => @stops[i+1], 
-                 :distance    => distance }
-      i += 1
+    (0...number_of_legs).each do |i|
+      stop1, stop2 = @stops[i], @stops[i+1]
+      dist = calculate_distance(stop1, stop2)
+      @legs << { :origin => stop1, :destination => stop2, :distance => dist }
     end
     @legs
   end
   
   private
   
-  def calculate_distance(origin, destination)
-    @routing_service.get('/distance', 
-                         :origin => origin, 
-                         :destination => destination)    
+  def calculate_distance(origin, dest)
+    @routing_service.get('/distance', :origin => origin, :destination => dest)
   end
 end
