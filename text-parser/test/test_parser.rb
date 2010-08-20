@@ -52,15 +52,15 @@ class TestParser < Test::Unit::TestCase
     expected = [
       { :last_name => 'Abercrombie', :first_name => 'Neil', 
         :gender    => 'Male',        :color      => 'Tan', 
-        :born_on   => Date.parse('2/13/1943') },
+        :born_on   => Date.new(1943, 2, 13) },
         
       { :last_name => 'Bishop', :first_name => 'Timothy', 
         :gender    => 'Male',   :color      => 'Yellow', 
-        :born_on   => Date.parse('4/23/1967') },
+        :born_on   => Date.new(1967, 4, 23) },
         
       { :last_name => 'Kelly',  :first_name => 'Sue', 
         :gender    => 'Female', :color      => 'Pink', 
-        :born_on   => Date.parse('7/12/1959') }
+        :born_on   => Date.new(1959, 7, 12) }
     ]
     
     parser = Parser.new('test/samples/comma.txt')

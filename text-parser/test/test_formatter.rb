@@ -12,39 +12,39 @@ class TestFormatter < Test::Unit::TestCase
     data = [
       { :last_name => 'Steve', :first_name => 'Smith', :initial => 'D', 
         :gender    => 'Male',  :color      => 'Red',   
-        :born_on => Date.parse('3/3/1985') },
+        :born_on => Date.new(1985, 3, 3) },
         
       { :last_name => 'Bonk', :first_name  => 'Radek', :initial => 'S', 
         :gender    => 'Male', :color       => 'Green', 
-        :born_on => Date.parse('6/3/1975') },
+        :born_on => Date.new(1975, 6, 3) },
         
       { :last_name => 'Bouillon', :first_name => 'Francis', :initial => 'G', 
         :gender    => 'Male',     :color      => 'Blue',    
-        :born_on => Date.parse('6/3/1975') },
+        :born_on => Date.new(1975, 6, 3) },
         
       { :last_name => 'Kournikova', :first_name => 'Anna', :initial => 'F', 
         :gender    => 'Female',     :color      => 'Red',  
-        :born_on => Date.parse('6/3/1975') },
+        :born_on => Date.new(1975, 6, 3) },
         
       { :last_name => 'Hingis', :first_name => 'Martina', :initial => 'M', 
         :gender    => 'Female', :color      => 'Green',   
-        :born_on => Date.parse('4/2/1979') },
+        :born_on => Date.new(1979, 4, 2) },
         
       { :last_name => 'Seles',  :first_name => 'Monica', :initial => 'H', 
         :gender    => 'Female', :color      => 'Black',  
-        :born_on => Date.parse('12/2/1973') },
+        :born_on => Date.new(1973, 12, 2) },
         
       { :last_name => 'Abercrombie', :first_name => 'Neil', 
         :gender    => 'Male',        :color      => 'Tan', 
-        :born_on => Date.parse('2/13/1943') },
+        :born_on => Date.new(1943, 2, 13) },
         
       { :last_name => 'Bishop', :first_name => 'Timothy', 
         :gender    => 'Male',   :color      => 'Yellow',  
-        :born_on => Date.parse('4/23/1967') },
+        :born_on => Date.new(1967, 4, 23) },
         
       { :last_name => 'Kelly',  :first_name => 'Sue', 
         :gender    => 'Female', :color      => 'Pink', 
-        :born_on => Date.parse('7/12/1959') }
+        :born_on => Date.new(1959, 7, 12) }
     ]
 
     @output = Output.new

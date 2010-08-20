@@ -63,6 +63,8 @@ class Parser
   end
   
   def normalize_date(date)
-    Date.parse(date.gsub('-', '/'))
+    parts = date.gsub('-', '/').split('/')
+    Date.new(parts[2].to_i, parts[0].to_i, parts[1].to_i)
+#    Date.parse(date.gsub('-', '/'))
   end
 end
